@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "Vk music caver",
+  "description": "Extension to save musik from vk.",
+
+  "version": "1.0",
+  "author": "Nyhnyk Andrii",
+
+  "permissions": [
+    "http://vk.com/"
+  ],
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://vk.com/*"],
+      "js": [ "jquery.js", "core.js" ]
+    }
+  ],
+
+  "background": {
+    "persistent": false,
+    "scripts": ["jquery.js", "core.js"]
+  }
+}
